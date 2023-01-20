@@ -1,7 +1,7 @@
 package com.amanda.project.controllers;
 
 import com.amanda.project.entities.User;
-import com.amanda.project.services.UserServices;
+import com.amanda.project.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,7 +15,7 @@ import java.util.List;
 public class UserController {
 
     @Autowired
-    private UserServices service;
+    private UserService service;
 
     @GetMapping
     public ResponseEntity<List<User>> findAll() {
